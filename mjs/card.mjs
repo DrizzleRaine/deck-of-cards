@@ -17,7 +17,9 @@ export default class Card {
   }
   setIndex (index) {
     this.index = index;
-    this.front.update(index);
+    if (this._side === 'front') {
+      this.front.update(index);
+    }
   }
   set ({ x = this.x, y = this.y, z = this.z }) {
     this.x = x;
@@ -36,6 +38,9 @@ export default class Card {
       return;
     }
     if (side === 'front') {
+      if (this.front.index !== this.index) {
+        this.front.update(this.index);
+      }
       this.back.style.display = 'none';
       mount(this.container, this.front);
     } else {

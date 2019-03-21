@@ -47,6 +47,7 @@ export default class Front {
     this.rank2.textContent = ranks[value];
     this.suit1.style.backgroundImage = `url(img/${suits[suit]}.svg)`;
     this.suit2.style.backgroundImage = `url(img/${suits[suit]}.svg)`;
+    this.index = index;
   }
 }
 

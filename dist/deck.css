@@ -4,9 +4,16 @@ html {
   text-size-adjust: 100%;
 }
 body {
-  font-family: 'Roboto Slab', sans-serif;
   background-color: #151515;
-  overflow: hidden;
+}
+.deck,
+.hand {
+  font-family: 'Roboto Slab', sans-serif;
+  position: absolute;
+}
+.deck .cards,
+.hand .cards {
+  position: absolute;
 }
 .scene {
   position: absolute;
@@ -21,14 +28,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
-.deck,
-.hand {
-  position: absolute;
-}
-.deck .cards,
-.hand .cards {
-  position: absolute;
 }
 .card {
   position: absolute;
@@ -45,8 +44,8 @@ body {
   transform: translate(-50%, -50%);
   background-color: #fff;
   border-radius: 0.1875rem;
-  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.125);
-  box-shadow: 0 1px 1px rgba(0,0,0,0.125);
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   overflow: hidden;
 }
 .card-front,
